@@ -1,0 +1,36 @@
+
+/* Font Colors */
+
+.blue-text {
+    color: #0984E3;
+}
+
+.grey-text {
+    color: #636E72;
+}
+
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+/* Background Colors */
+
+.honey-bg {
+    background-color: #FDCB6E;
+}
+
+.grey-bg {
+    background-color: #DFE6E9;
+}
+
+.dark-bg {
+    background-color: #636E72;
+}
+
+.white-bg {
+    background-color: white;
+}
