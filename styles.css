@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin: 8%;
+    margin-top: 0;
+}
+
+section {
+    margin-top: 5%;
+}
+
+.lineSection {
+    padding-bottom: 5%;
+    border-bottom: 1px solid black;
+}
+
+.icon {
+    width: 50px;
+}
+
+figcaption {
+    margin-top: 5px;
+}
+
+/* Header Section */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 8% 5% 8%;
+}
+
+header h2 {
+    display: inline;
+    grid-area: logo;
+}
+
+header nav img {
+    width: 25px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.heroSection img {
+    border-radius: 25px;
+    max-width: 100%;
+}
+
+.heroSection h4 {
+    margin-top: 10%;
+    margin-bottom: 0.5rem;
+}
+
+/* About Me Section */
+
+.aboutMeSection {
+    display: grid;
+    grid-template-areas:
+            "title  image"
+            "text   image"
+            "button button";
+}
+
+.aboutMeSection h3 {
+    grid-area: title;
+}
+
+.aboutMeSection p {
+    grid-area: text;
+}
+
+.aboutMeSection img {
+    grid-area: image;
+    width: 100px;
+}
+
+.aboutMeSection button {
+    grid-area: button;
+    width: fit-content;
+    margin-top: 5%;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.aboutMeSection button:hover {
+    background-color: #ebbc66;
+}
+
+/* Skills Section */
+
+.skillsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+/* Projects Section */
+
+.projectsSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectsSection img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.projectsSection button {
+    width: fit-content;
+    margin-top: 5%;
+    margin-top: 5%;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+    transition: 500ms;
+}
+
+.projectsSection button:hover {
+    background-color: #ebbc66;
+}
+
+/* Experience Section */
+
+/* Education Section */
+.educationSection li {
+    font-size: 0.75rem;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+/* Footer Section */
+
+footer {
+    margin-top: 5%;
+}
+
+.contactsWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+}
