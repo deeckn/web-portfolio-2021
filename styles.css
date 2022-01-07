@@ -12,6 +12,7 @@ main {
 
 section {
     margin-top: 5%;
+    transition: 500ms;
 }
 
 .lineSection {
@@ -27,12 +28,52 @@ figcaption {
     margin-top: 5px;
 }
 
+/* Media Queries for General Tags */
+@media (min-width: 768px) {
+    .icon {
+        width: 75px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin-top: 5%;
+    }
+
+    section {
+        margin-top: 5%;
+    }
+
+    .icon {
+        width: 75px;
+    }
+}
+
+@media (min-width: 1400px) {
+    main {
+        margin-top: 2rem;
+    }
+
+    section {
+        margin-top: 2rem;
+    }
+
+    .lineSection {
+        padding-bottom: 2rem;
+    }
+
+    .icon {
+        width: 100px;
+    }
+}
+
 /* Header Section */
 
 header {
     display: flex;
     justify-content: space-between;
     margin: 10% 8% 5% 8%;
+    transition: margin-top 500ms;
 }
 
 header h2 {
@@ -45,6 +86,16 @@ header nav img {
     cursor: pointer;
 }
 
+/* Header Section Media Queries */
+
+@media (min-width: 1200px) {
+    header {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+
 /* Hero Section */
 
 .heroSection img {
@@ -55,6 +106,30 @@ header nav img {
 .heroSection h4 {
     margin-top: 10%;
     margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1200px) {
+    .heroSection {
+        display: grid;
+        grid-template-areas:
+                "image subtitle"
+                "image title";
+        grid-template-columns: 2fr 3fr;
+        column-gap: 2rem;
+    }
+
+    .heroSection img {
+        grid-area: image;
+    }
+
+    .heroSection h1 {
+        grid-area: title;
+    }
+
+    .heroSection h4 {
+        grid-area: subtitle;
+        align-self: flex-end;
+    }
 }
 
 /* About Me Section */
@@ -88,10 +163,35 @@ header nav img {
     border: none;
     border-radius: 5px;
     transition: 500ms;
+    cursor: pointer;
 }
 
 .aboutMeSection button:hover {
     background-color: #ebbc66;
+}
+
+@media (min-width: 768px) {
+    .aboutMeSection img {
+        width: 150px;
+    }
+
+    .aboutMeSection button {
+        margin-top: 2rem;
+        border-radius: 10px;
+        padding: 12px 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .aboutMeSection img {
+        width: 200px;
+    }
+
+    .aboutMeSection button {
+        margin-top: 2rem;
+        border-radius: 10px;
+        padding: 12px 32px;
+    }
 }
 
 /* Skills Section */
@@ -105,8 +205,40 @@ header nav img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 6px 12px;
     border-radius: 10px;
+    transition: 500ms;
+}
+
+@media (min-width: 480px) {
+    .skillCard {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (min-width: 768px) {
+    .skillCard {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skillCard {
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .skillCard {
+        width: 220px;
+        height: 220px;
+        border-radius: 25px;
+    }
 }
 
 /* Projects Section */
@@ -130,17 +262,53 @@ header nav img {
     border-radius: 5px;
     align-self: center;
     transition: 500ms;
+    cursor: pointer;
 }
 
 .projectsSection button:hover {
     background-color: #ebbc66;
 }
 
+.dotsWrapper {
+    display: flex;
+    align-self: center;
+    margin-top: 2%;
+}
+
+.dot {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 500ms;
+}
+
+@media (min-width: 768px) {
+    .dot {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .projectsSection img {
+        width: 50%;
+        border-radius: 25px;
+        align-self: center;
+    }
+
+    .projectsSection button {
+        border-radius: 15px;
+        padding: 12px 32px;
+    }
+}
+
 /* Experience Section */
 
 /* Education Section */
 .educationSection li {
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
     margin-top: 5px;
     margin-left: 5%;
 }
