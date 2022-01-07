@@ -34,6 +34,10 @@ p  {
     line-height: 1.5;
 }
 
+button {
+    font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
 figcaption { 
     font-size: clamp(0.75rem, 2vw, 1.5rem); 
     font-weight: normal;
