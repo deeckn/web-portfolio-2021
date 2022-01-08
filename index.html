@@ -12,28 +12,31 @@
 </head>
 
 <body>
+    <!-- Responsive Logo and Navigation -->
     <header>
         <h2 class="dark-text">Chakrin D.</h2>
         <nav>
             <img src="/assets/svgs/iconMenu.svg" alt="Menu Icon">
             <ul class="navLinks">
                 <li><a href="" class="blue-text">Home</a></li>
-                <li><a href="" class="black-text">About me</a></li>
-                <li><a href="" class="black-text">Projects</a></li>
-                <li><a href="" class="black-text">Contacts</a></li>
+                <li><a href="" class="dark-text">About me</a></li>
+                <li><a href="" class="dark-text">Projects</a></li>
+                <li><a href="#contact" class="dark-text">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="heroSection lineSection">
+        <!-- Hero Section -->
+        <section class="heroSection">
             <img src="/assets/images/heroImage.jpeg" alt="Hero Image">
             <div class="heroText">
-                <h4 class="grey-text">Software Engineering Student</h4>
+                <h4 class="grey-text">Software Engineering Student 💻</h4>
                 <h1 class="dark-text">Chakrin Deesit</h1>
             </div>
         </section>
 
+        <!-- About Me Section -->
         <section class="aboutMeSection lineSection">
             <h3 class="blue-text">About me</h3>
             <div class="aboutMeContainer">
@@ -48,27 +51,37 @@
                 </p>
                 <img src="/assets/svgs/cartoonPerson.svg" alt="Person Vector">
             </div>
-            <button class="white-text honey-bg">Read More</button>
+
+            <!-- Link to About Me Page -->
+            <a href="">
+                <button class="white-text honey-bg">Read More</button>
+            </a>
         </section>
 
+        <!-- Programming Languages Section -->
         <section class="languagesSection">
             <h3 class="blue-text">Programming Languages</h3>
             <div class="skillsContainer">
+
+                <!-- Python -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconPython.svg" alt="Python Icon" class="icon">
                     <figcaption class="dark-text">Python</figcaption>
                 </div>
 
+                <!-- Java -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconJava.svg" alt="Java Icon" class="icon">
                     <figcaption>Java</figcaption>
                 </div>
 
+                <!-- JavaScript -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconJs.svg" alt="JavaScript Icon" class="icon">
                     <figcaption>JavaScript</figcaption>
                 </div>
 
+                <!-- C++ -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconCpp.svg" alt="Cpp Icon" class="icon">
                     <figcaption>C++</figcaption>
@@ -76,24 +89,30 @@
             </div>
         </section>
 
+        <!-- Other Technical Skills Section -->
         <section class="skillsSection lineSection">
             <h3 class="blue-text">Other Tech Skills</h3>
             <div class="skillsContainer">
+
+                <!-- HTML -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconHtml.svg" alt="HTML Icon" class="icon">
                     <figcaption>HTML</figcaption>
                 </div>
 
+                <!-- CSS -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconCss.svg" alt="CSS Icon" class="icon">
                     <figcaption>CSS</figcaption>
                 </div>
 
+                <!-- Figma -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconFigma.svg" alt="Figma Icon" class="icon">
                     <figcaption>Figma</figcaption>
                 </div>
 
+                <!-- Android -->
                 <div class="skillCard grey-bg">
                     <img src="/assets/svgs/iconAndroid.svg" alt="Android Icon" class="icon">
                     <figcaption>Android</figcaption>
@@ -101,6 +120,7 @@
             </div>
         </section>
 
+        <!-- Software Development Projects -->
         <section class="projectsSection lineSection">
             <h3 class="blue-text">Development Projects</h3>
             <img src="/assets/images/placeholder.png" alt="placeholder image">
@@ -116,9 +136,12 @@
                 It's hard to find an online GPA calculator with the same grading system as my country.
                 So, why not build my own GPA calculator?
             </p>
-            <button class="white-text honey-bg">Check out the GitHub Repository</button>
+            <a href="">
+                <button class="white-text honey-bg">Check out the GitHub Repository</button>
+            </a>
         </section>
 
+        <!-- Experiences Section -->
         <section class="experiencesSection">
             <h3 class="blue-text">Experiences</h3>
             <p class="black-text">
@@ -129,6 +152,7 @@
             </p>
         </section>
 
+        <!-- Education Section -->
         <section class="educationSection lineSection">
             <h3 class="blue-text">Education</h3>
             <p class="black-text">
@@ -140,9 +164,12 @@
             </p>
         </section>
 
-        <footer class="contactSection">
+        <!-- Contacts Footer -->
+        <footer class="contactSection" id="contact">
             <h3 class="blue-text">Contact</h3>
             <div class="contactsWrapper">
+
+                <!-- Email Address -->
                 <div class="contactItem honey-bg">
                     <a href="mailto:ckn.deesit@gmail.com?">
                         <img src="/assets/svgs/iconMail.svg" alt="Email Icon" id="emailCard" class="icon">
@@ -150,6 +177,7 @@
                     </a>
                 </div>
 
+                <!-- LinkedIn Profile -->
                 <div class="contactItem honey-bg" id="linkedinCard">
                     <a href="https://www.linkedin.com/in/chakrin-deesit-076804209/">
                         <img src="/assets/svgs/iconLinkedin.svg" alt="LinkedIn Icon" class="icon">
@@ -157,6 +185,7 @@
                     </a>
                 </div>
 
+                <!-- GitHub Profile -->
                 <div class="contactItem honey-bg">
                     <a href="https://github.com/deeckn">
                         <img src="/assets/svgs/iconGithub.svg" alt="GitHub Icon" class="icon">

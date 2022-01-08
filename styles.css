@@ -1,8 +1,14 @@
 
+/* General Elements */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 main {
@@ -29,42 +35,24 @@ figcaption {
 }
 
 /* Media Queries for General Tags */
-@media (min-width: 768px) {
-    .icon {
-        width: 75px;
-    }
+@media (min-width: 768px)
+{
+    .icon { width: 75px; }
 }
 
-@media (min-width: 1200px) {
-    main {
-        margin-top: 5%;
-    }
-
-    section {
-        margin-top: 5%;
-    }
-
-    .icon {
-        width: 75px;
-    }
+@media (min-width: 1200px)
+{
+    main    { margin-top: 5%; }
+    section { margin-top: 5%; }
+    .icon   { width: 75px; }
 }
 
-@media (min-width: 1400px) {
-    main {
-        margin-top: 2rem;
-    }
-
-    section {
-        margin-top: 2rem;
-    }
-
-    .lineSection {
-        padding-bottom: 2rem;
-    }
-
-    .icon {
-        width: 100px;
-    }
+@media (min-width: 1400px)
+{
+    main         { margin-top: 2rem; }
+    section      { margin-top: 2rem; }
+    .lineSection { padding-bottom: 2rem; }
+    .icon        { width: 100px; }
 }
 
 /* Header Section */
@@ -77,8 +65,8 @@ header {
 }
 
 header h2 {
-    display: inline;
     grid-area: logo;
+    display: inline;
 }
 
 header nav {
@@ -115,7 +103,8 @@ header nav img {
 
 /* Header Section Media Queries */
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px)
+{
     header {
         margin-top: 2rem;
         margin-bottom: 0;
@@ -143,22 +132,36 @@ header nav img {
 
 /* Hero Section */
 
-.heroSection img {
+.heroSection {
+    background-color: #f3faff;
     border-radius: 25px;
+    box-shadow: 2px 2px 5px #8d8d8d;
+    padding: 5%;
+}
+
+.heroSection img {
     max-width: 100%;
+    border-radius: 25px;
     box-shadow: 3px 3px 10px #8d8d8d;
 }
 
 .heroSection h4 {
-    margin-top: 10%;
     margin-bottom: 0.5rem;
 }
 
-@media (min-width: 1200px) {
+/* Hero Section Media Query */
+
+@media (min-width: 1200px)
+{
     .heroSection {
         display: grid;
-        grid-template-columns: 2fr 3fr;
+        grid-template-columns: 1fr 3fr;
         column-gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .heroSection img {
+        align-self: flex-end;
     }
 
     .heroSection .heroText {
@@ -187,6 +190,7 @@ header nav img {
     width: fit-content;
     margin-top: 5%;
     padding: 6px 16px;
+
     border: none;
     border-radius: 5px;
     transition: 500ms;
@@ -197,26 +201,30 @@ header nav img {
     background-color: #ebbc66;
 }
 
-@media (min-width: 768px) {
+/* About Me Section Media Queries */
+
+@media (min-width: 768px)
+{
     .aboutMeSection img {
         width: 150px;
     }
 
     .aboutMeSection button {
         margin-top: 0;
-        border-radius: 10px;
         padding: 12px 32px;
+        border-radius: 10px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px)
+{
     .aboutMeSection img {
         width: 200px;
     }
 
     .aboutMeSection button {
-        border-radius: 10px;
         padding: 12px 32px;
+        border-radius: 10px;
     }
 }
 
@@ -237,21 +245,26 @@ header nav img {
     transition: 500ms;
 }
 
-@media (min-width: 480px) {
+/* Skills Section Media Queries */
+
+@media (min-width: 480px)
+{
     .skillCard {
         width: 110px;
         height: 110px;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px)
+{
     .skillCard {
         width: 160px;
         height: 160px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px)
+{
     .skillCard {
         width: 200px;
         height: 200px;
@@ -259,7 +272,8 @@ header nav img {
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1400px)
+{
     .skillCard {
         width: 220px;
         height: 220px;
@@ -279,14 +293,17 @@ header nav img {
     border-radius: 25px;
 }
 
+.projectsSection a {
+    align-self: center;
+    margin-top: 5%;
+}
+
 .projectsSection button {
     width: fit-content;
-    margin-top: 5%;
-    margin-top: 5%;
     padding: 6px 16px;
     border: none;
     border-radius: 5px;
-    align-self: center;
+
     transition: 500ms;
     cursor: pointer;
 }
@@ -305,20 +322,23 @@ header nav img {
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px;
     transition: 500ms;
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
+/* Projects Section Media Queries */
+
+@media (min-width: 768px)
+{
     .dot {
         width: 15px;
         height: 15px;
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1400px)
+{
     .projectsSection img {
         width: 50%;
         border-radius: 25px;
@@ -332,6 +352,7 @@ header nav img {
 }
 
 /* Education Section */
+
 .educationSection li {
     font-size: clamp(0.75rem, 2vw, 1.5rem);
     margin-top: 5px;
