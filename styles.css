@@ -120,6 +120,24 @@ header nav img {
         margin-top: 2rem;
         margin-bottom: 0;
     }
+
+    header nav img {
+        display: none;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLinks li {
+        margin-left: 4rem;
+    }
+
+    .navLinks li a {
+        font-size: clamp(0.75rem, 1.5vw, 2rem);
+        font-weight: 500;
+    }
 }
 
 
@@ -309,6 +327,7 @@ header nav img {
     margin-left: 5px;
     margin-right: 5px;
     transition: 500ms;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -330,8 +349,6 @@ header nav img {
         padding: 12px 32px;
     }
 }
-
-/* Experience Section */
 
 /* Education Section */
 .educationSection li {
