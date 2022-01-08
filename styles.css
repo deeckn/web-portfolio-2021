@@ -45,13 +45,17 @@ figcaption {
     main    { margin-top: 5%; }
     section { margin-top: 5%; }
     .icon   { width: 75px; }
+
+    .lineSection {
+        padding-bottom: 2rem;
+        border: none;
+    }
 }
 
 @media (min-width: 1400px)
 {
     main         { margin-top: 2rem; }
-    section      { margin-top: 2rem; }
-    .lineSection { padding-bottom: 2rem; }
+    section      { margin-top: 4rem; }
     .icon        { width: 100px; }
 }
 
@@ -138,6 +142,8 @@ header nav img {
     border-radius: 25px;
     box-shadow: 2px 2px 5px #8d8d8d;
     padding: 5%;
+
+    background-color: #f8f8ff;
 }
 
 .heroSection img {
@@ -193,7 +199,6 @@ header nav img {
 
 .aboutMeSection button {
     grid-area: button;
-    width: fit-content;
     margin-top: 5%;
     padding: 6px 16px;
 
@@ -231,6 +236,10 @@ header nav img {
     .aboutMeSection button {
         padding: 12px 32px;
         border-radius: 10px;
+    }
+
+    .aboutMeSection.lineSection {
+        border: none;
     }
 }
 
@@ -271,19 +280,61 @@ header nav img {
 
 @media (min-width: 1200px)
 {
+    .skillSectionContainer {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 0;
+        background-color: #f8f8ff;
+        border-radius: 50px;
+        box-shadow: 2px 2px 15px #8d8d8d;
+    }
+
+    .skillsContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+
+        padding: 2rem;
+        border-radius: 25px;
+
+        background-color: #f8f8ff;
+    }
+
+    .skillsSection.lineSection {
+        border: none;
+    }
+
     .skillCard {
         width: 200px;
         height: 200px;
         border-radius: 15px;
+    }
+
+    .languagesSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skillsSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (min-width: 1400px)
 {
     .skillCard {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
         border-radius: 25px;
+    }
+
+    section.skillSectionContainer {
+        margin-top: 2rem;
     }
 }
 
@@ -312,12 +363,14 @@ header nav img {
 
 .projectsSection button {
     width: fit-content;
-    padding: 6px 16px;
+    padding: 10px 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 
     transition: 500ms;
     cursor: pointer;
+
+    box-shadow: 2px 2px 5px #8d8d8d;
 }
 
 .projectsSection button:hover {
@@ -351,10 +404,45 @@ header nav img {
 
 @media (min-width: 1400px)
 {
+    .projectsSection {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+                "title  title   title"
+                "name   image   dots"
+                "text   image   dots"
+                "button image   dots";
+        column-gap: 2rem;
+    }
+
+    .projectsSection h3 {
+        grid-area: title;
+    }
+
     .projectsSection img {
-        width: 50%;
+        grid-area: image;
         border-radius: 25px;
         align-self: center;
+    }
+
+    .projectsSection .dotsWrapper {
+        grid-area: dots;
+        flex-direction: column;
+    }
+
+    .projectsSection .dotsWrapper .dot {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .projectsSection h4 {
+        grid-area: name;
+    }
+    .projectsSection p {
+        grid-area: text;
+    }
+    .projectsSection a {
+        grid-area: button;
     }
 
     .projectsSection button {
