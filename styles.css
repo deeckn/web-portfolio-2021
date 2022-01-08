@@ -210,7 +210,7 @@ header nav img {
 @media (min-width: 768px)
 {
     .aboutMeSection img {
-        width: 150px;
+        width: 125px;
     }
 
     .aboutMeSection button {
@@ -223,7 +223,7 @@ header nav img {
 @media (min-width: 1200px)
 {
     .aboutMeSection img {
-        width: 200px;
+        width: 175px;
     }
 
     .aboutMeSection button {
