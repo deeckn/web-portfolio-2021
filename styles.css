@@ -146,6 +146,7 @@ header nav img {
 .heroSection img {
     border-radius: 25px;
     max-width: 100%;
+    box-shadow: 3px 3px 10px #8d8d8d;
 }
 
 .heroSection h4 {
@@ -156,23 +157,11 @@ header nav img {
 @media (min-width: 1200px) {
     .heroSection {
         display: grid;
-        grid-template-areas:
-                "image subtitle"
-                "image title";
         grid-template-columns: 2fr 3fr;
         column-gap: 2rem;
     }
 
-    .heroSection img {
-        grid-area: image;
-    }
-
-    .heroSection h1 {
-        grid-area: title;
-    }
-
-    .heroSection h4 {
-        grid-area: subtitle;
+    .heroSection .heroText {
         align-self: flex-end;
     }
 }
@@ -180,24 +169,17 @@ header nav img {
 /* About Me Section */
 
 .aboutMeSection {
-    display: grid;
-    grid-template-areas:
-            "title  image"
-            "text   image"
-            "button button";
+    display: flex;
+    flex-direction: column;
 }
 
-.aboutMeSection h3 {
-    grid-area: title;
-}
-
-.aboutMeSection p {
-    grid-area: text;
+.aboutMeSection .aboutMeContainer {
+    display: flex;
 }
 
 .aboutMeSection img {
-    grid-area: image;
     width: 100px;
+    align-self: center;
 }
 
 .aboutMeSection button {
@@ -221,7 +203,6 @@ header nav img {
     }
 
     .aboutMeSection button {
-        margin-top: 2rem;
         border-radius: 10px;
         padding: 12px 32px;
     }
@@ -374,4 +355,9 @@ footer {
     align-items: center;
     padding: 8px;
     border-radius: 10px;
+    transition: 500ms;
+}
+
+.contactItem:hover {
+    opacity: 0.5;
 }
