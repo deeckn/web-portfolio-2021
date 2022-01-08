@@ -138,7 +138,7 @@ header nav img {
 /* Hero Section */
 
 .heroSection {
-    background-color: #f3faff;
+    background-color: #f8f8ff;
     border-radius: 25px;
     box-shadow: 2px 2px 5px #8d8d8d;
     padding: 5%;
@@ -466,6 +466,18 @@ header nav img {
     font-size: clamp(0.75rem, 2vw, 1.5rem);
     margin-top: 5px;
     margin-left: 5%;
+}
+
+/* Education Section Media Queries */
+
+@media (min-width: 1200px) {
+    .educationSection {
+        background-color: #f8f8f8;
+        border-radius: 25px;
+        box-shadow: 2px 2px 5px #8d8d8d;
+        padding: 5%;
+        padding-top: 3%;
+    }
 }
 
 /* Footer Section */
