@@ -1,133 +1,160 @@
 
 // Responsive Navigation Menu
-const navLinks = document.querySelector(".navLinks");
-const menuButton = document.querySelector("header nav img");
+class NavigationBar {
+    constructor() {
+        this.navLinks = document.querySelector(".navLinks");
+        this.menuButton = document.querySelector("header nav img");
 
-menuButton.addEventListener('click', () => {
-    navLinks.classList.toggle("navActive");
-});
-
-// Project Showcase Functionality
-
-// Project Content Containers
-const imageContainer = document.querySelector("#projectImageContainer");
-const projectName = document.querySelector(".projectName");
-const projectDescription = document.querySelector("#projectDescription");
-const repoButton = document.querySelector(".projectsSection a");
-
-// Project Selector Dots
-const projectOne = document.querySelector("#projectOne");
-const projectTwo = document.querySelector("#projectTwo");
-const projectThree = document.querySelector("#projectThree");
-const projectFour = document.querySelector("#projectFour");
-const projectFive = document.querySelector("#projectFive");
-const projectSix = document.querySelector("#projectSix");
-const dotButtons = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
-
-let currentChoice = 0;
-
-projectDots = {
-    1: projectOne,
-    2: projectTwo,
-    3: projectThree,
-    4: projectFour,
-    5: projectFive,
-    6: projectSix
-};
-
-function changeProjectTo(projectNumber) {
-    if (projectNumber === currentChoice) return;
-
-    switch (projectNumber) {
-        case 1:
-            changeProjectContents(
-                "GIN ARAI DEE : Android Application",
-                "/assets/images/gad-demo.png",
-                "GIN ARAI DEE is an Android application written in Java. \
-                Provides food recommendations, food randomizer, bill splitting, and dietary planning.",
-                "https://github.com/deeckn/GIN-ARAI-DEE"
-            );
-            updateSelectedDot(1);
-            currentChoice = 1;
-            break;
-        case 2:
-            changeProjectContents(
-                "TODOLIST : Android Application",
-                "/assets/images/todo-demo.png",
-                "A simple TODO list android application using Java and SQLite.",
-                "https://github.com/deeckn/TODOLIST"
-            );
-            updateSelectedDot(2);
-            currentChoice = 2;
-            break;
-        case 3:
-            changeProjectContents(
-                "Shunting Yard Calculator : Web Application",
-                "/assets/images/calc-demo.png",
-                "A simple web calculator that utilizes the Shunting Yard algorithm to compute mathematical expressions.\
-                 Using a combination of the Stack and Queue data structures.",
-                "https://github.com/deeckn/ShuntingYard-Calculator"
-            );
-            updateSelectedDot(3);
-            currentChoice = 3;
-            break;
-        case 4:
-            changeProjectContents(
-                "Dad Jokes Generator : Web Application",
-                "/assets/images/jokes-demo.png",
-                "A fun web application to fetch dad jokes from an API.",
-                "https://github.com/deeckn/Dad-Jokes"
-            );
-            updateSelectedDot(4);
-            currentChoice = 4;
-            break;
-        case 5:
-            changeProjectContents(
-                "GPA DEE MHAI : Web Application",
-                "/assets/images/gpa-demo.png",
-                "It's hard to find an online GPA calculator with the same grading system as my country.\
-                 So, why not build my own GPA calculator?",
-                "https://github.com/deeckn/GPA-DEE-MHAI"
-            );
-            updateSelectedDot(5);
-            currentChoice = 5;
-            break;
-        case 6:
-            changeProjectContents(
-                "Self-storage Management System : Desktop Application",
-                "/assets/images/ssms-demo.png",
-                "Self Storage Managment System using the Qt Framework.",
-                "https://github.com/deeckn/qt-gui-term-project"
-            );
-            updateSelectedDot(6);
-            currentChoice = 6;
-            break;
-        default:
-            console.log("No choice avaliable");
-            break;
+        this.menuButton.addEventListener('click', () => {
+            this.navLinks.classList.toggle("navActive");
+        });
     }
 }
 
-function changeProjectContents(projectTitle, imageFile, description, url) {
-    projectName.textContent = projectTitle;
-    imageContainer.src = imageFile;
-    projectDescription.textContent = description;
-    repoButton.href = url;
+// Project Section Image Carousel Functionality
+class ProjectCarousel {
+    constructor() {
+        // Container UI Elements
+        this.imageContainer = document.querySelector("#projectImageContainer");
+        this.projectName = document.querySelector(".projectName");
+        this.projectDescription = document.querySelector("#projectDescription");
+        this.repoButton = document.querySelector(".projectsSection a");
+
+        // Project Selector Dots
+        this.projectOne = document.querySelector("#projectOne");
+        this.projectTwo = document.querySelector("#projectTwo");
+        this.projectThree = document.querySelector("#projectThree");
+        this.projectFour = document.querySelector("#projectFour");
+        this.projectFive = document.querySelector("#projectFive");
+        this.projectSix = document.querySelector("#projectSix");
+        this.dotButtons = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
+
+        this.projectDots = {
+            1: projectOne,
+            2: projectTwo,
+            3: projectThree,
+            4: projectFour,
+            5: projectFive,
+            6: projectSix
+        };
+
+        // Project Dots Click Listeners
+        for (let i = 0; i < 6; i++) {
+            this.dotButtons[i].addEventListener('click', () => {
+                if (i + 1 === this.currentChoice) return;
+                this.changeProjectTo(i + 1);
+            });
+        }
+
+        // Image Container Event Listener
+        this.imageContainer.addEventListener('click', () => {
+            if (this.currentChoice === 6) {
+                this.changeProjectTo(1);
+            } else {
+                this.changeProjectTo(this.currentChoice + 1);
+            }
+        });
+
+        // Default Choice
+        this.currentChoice = 0;
+        this.changeProjectTo(1);
+    }
+
+    // Changes the UI depending on project number
+    changeProjectTo(projectNumber) {
+        if (projectNumber === this.currentChoice) return;
+
+        switch (projectNumber) {
+            case 1:
+                this.changeProjectContents(
+                    "GIN ARAI DEE : Android Application",
+                    "/assets/images/gad-demo.png",
+                    "GIN ARAI DEE is an Android application written in Java. \
+                    Provides food recommendations, food randomizer, bill splitting, and dietary planning.",
+                    "https://github.com/deeckn/GIN-ARAI-DEE"
+                );
+                this.updateSelectedDot(1);
+                this.currentChoice = 1;
+                break;
+            case 2:
+                this.changeProjectContents(
+                    "TODOLIST : Android Application",
+                    "/assets/images/todo-demo.png",
+                    "A simple TODO list android application using Java and SQLite.",
+                    "https://github.com/deeckn/TODOLIST"
+                );
+                this.updateSelectedDot(2);
+                this.currentChoice = 2;
+                break;
+            case 3:
+                this.changeProjectContents(
+                    "Shunting Yard Calculator : Web Application",
+                    "/assets/images/calc-demo.png",
+                    "A simple web calculator that utilizes the Shunting Yard algorithm to compute mathematical expressions.\
+                     Using a combination of the Stack and Queue data structures.",
+                    "https://github.com/deeckn/ShuntingYard-Calculator"
+                );
+                this.updateSelectedDot(3);
+                this.currentChoice = 3;
+                break;
+            case 4:
+                this.changeProjectContents(
+                    "Dad Jokes Generator : Web Application",
+                    "/assets/images/jokes-demo.png",
+                    "A fun web application to fetch dad jokes from an API.",
+                    "https://github.com/deeckn/Dad-Jokes"
+                );
+                this.updateSelectedDot(4);
+                this.currentChoice = 4;
+                break;
+            case 5:
+                this.changeProjectContents(
+                    "GPA DEE MHAI : Web Application",
+                    "/assets/images/gpa-demo.png",
+                    "It's hard to find an online GPA calculator with the same grading system as my country.\
+                     So, why not build my own GPA calculator?",
+                    "https://github.com/deeckn/GPA-DEE-MHAI"
+                );
+                this.updateSelectedDot(5);
+                this.currentChoice = 5;
+                break;
+            case 6:
+                this.changeProjectContents(
+                    "Self-storage Management System : Desktop Application",
+                    "/assets/images/ssms-demo.png",
+                    "Self Storage Managment System using the Qt Framework.",
+                    "https://github.com/deeckn/qt-gui-term-project"
+                );
+                this.updateSelectedDot(6);
+                this.currentChoice = 6;
+                break;
+            default:
+                console.log("No choice avaliable");
+                break;
+        }
+    }
+
+    // Update the project section elements based on info passed
+    changeProjectContents(projectTitle, imageFile, description, url) {
+        this.projectName.textContent = projectTitle;
+        this.imageContainer.src = imageFile;
+        this.projectDescription.textContent = description;
+        this.repoButton.href = url;
+    }
+
+    // Changes color of the project dot selected
+    updateSelectedDot(projectNumber) {
+        this.projectDots[projectNumber].classList.toggle("dark-bg");
+
+        if (this.currentChoice === 0) return;
+        this.projectDots[this.currentChoice].classList.toggle("dark-bg");
+    }
 }
 
-function updateSelectedDot(projectNumber) {
-    projectDots[projectNumber].classList.toggle("dark-bg");
-
-    if (currentChoice === 0) return;
-    projectDots[currentChoice].classList.toggle("dark-bg");
+// Driver Function
+function main() {
+    new NavigationBar();
+    new ProjectCarousel();
 }
 
-// Event Listeners For Dots
-for (let i = 0; i < 6; i++) {
-    dotButtons[i].addEventListener('click', () => {
-        if (i + 1 === currentChoice) return;
-        changeProjectTo(i + 1);
-    });
-}
-
-changeProjectTo(1);
+main();
