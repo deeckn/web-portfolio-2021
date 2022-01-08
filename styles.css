@@ -67,6 +67,7 @@ header {
 header h2 {
     grid-area: logo;
     display: inline;
+    cursor: default;
 }
 
 header nav {
@@ -145,6 +146,10 @@ header nav img {
     box-shadow: 3px 3px 10px #8d8d8d;
 }
 
+.heroSection .heroText {
+    cursor: default;
+}
+
 .heroSection h4 {
     margin-bottom: 0.5rem;
 }
@@ -166,6 +171,7 @@ header nav img {
 
     .heroSection .heroText {
         align-self: flex-end;
+        margin-left: 5%;
     }
 }
 
@@ -292,7 +298,11 @@ header nav img {
     width: 100%;
     border-radius: 25px;
     box-shadow: 2px 2px 5px #8d8d8d;
+    cursor: pointer;
+}
 
+.projectsSection h4 {
+    font-weight: 700;
 }
 
 .projectsSection a {

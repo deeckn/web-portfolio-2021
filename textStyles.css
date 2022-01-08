@@ -23,6 +23,7 @@ h3 {
     font-size: clamp(1rem, 5vw, 2.25rem);
     font-weight: bold;
     margin-bottom: 5%;
+    cursor: default;
 }
 
 h4 {
@@ -30,6 +31,7 @@ h4 {
     font-weight: 700;
     font-size: clamp(0.75rem, 2vw, 2rem);
     margin: 5% 0;
+    cursor: default;
 }
 
 p  {
