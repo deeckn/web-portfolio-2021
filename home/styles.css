@@ -125,7 +125,7 @@ figcaption {
 header {
     display: flex;
     justify-content: space-between;
-    margin: 10% 8% 5% 8%;
+    margin: 5% 8%;
     transition: margin-top 500ms;
 }
 
