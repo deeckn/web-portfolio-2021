@@ -1,0 +1,279 @@
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Mobile Fonts */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 5.5rem);
+    font-weight: bold;
+}
+
+.logo-text {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    font-weight: bold;
+    cursor: default;
+}
+
+h2 {
+    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    font-weight: bold;
+    margin-bottom: 5%;
+    cursor: default;
+}
+
+h3 {
+    font-size: clamp(0.75rem, 2vw, 2rem);
+    font-weight: 500;
+    cursor: default;
+}
+
+p  {
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+figcaption { 
+    font-size: clamp(0.8rem, 2vw, 1.5rem); 
+    font-weight: 500;
+}
+
+button {
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+/* General Elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    margin: 0 8%;
+}
+
+/* Header Section */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 8% 5% 8%;
+    transition: margin-top 500ms;
+}
+
+header h2 {
+    grid-area: logo;
+    display: inline;
+    cursor: default;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navLinks {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style: none;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.navLinks li a:hover {
+    color: #0984E3;
+}
+
+header nav img {
+    width: 25px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+.navActive {
+    display: flex;
+}
+
+/* Header Section Media Queries */
+
+@media (min-width: 1200px)
+{
+    header {
+        margin-top: 2rem;
+    }
+
+    header nav img {
+        display: none;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLinks li {
+        margin-left: 4rem;
+    }
+
+    .navLinks li a {
+        font-size: clamp(0.75rem, 1.5vw, 2rem);
+        font-weight: 500;
+    }
+}
+
+/* Project List Section */
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px clamp(10px, 1vw, 15px) #5a5a5a;
+    background-color: #F8F8FF;
+    border-radius: 10px;
+}
+
+.briefInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 5%;
+}
+
+.techUsed {
+    display: flex;
+    padding-left: 10px;
+}
+
+.techUsed img {
+    width: clamp(20px, 4vw, 60px);
+}
+
+.infoButton {
+    border: none;
+    border-radius: 5px;
+    padding: 5% 0;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.infoButton:hover {
+    background-color: #ebbc66;
+}
+
+.fullInfo {
+    display: none;
+    flex-direction: column;
+    padding: 0 5% 5% 5%;
+    width: 100%;
+}
+
+.fullInfo p {
+    margin: 5% 0;
+}
+
+.fullInfo a {
+    grid-area: link;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.fullInfo img {
+    grid-area: image;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.fullInfoShow {
+    display: flex;
+}
+
+/* Footer Section */
+
+footer {
+    margin-top: 5%;
+    padding: 5% 8% 8%;
+    background-color: #2D3436;
+}
+
+.contactsWrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1rem;
+}
+
+.contactItem {
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 500ms;
+    box-shadow: 2px 2px 1px #0984E3;
+}
+
+.contactItem a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+.contactItem .icon {
+    padding-left: 1rem;
+    width: 60px;
+}
+
+.contactItem a figcaption {
+    padding-left: 1rem;
+}
+
+.contactItem:hover {
+    opacity: 0.5;
+}
+
+/* Contact Section Media Queries */
+
+@media (min-width: 1200px)
+{
+    .contactsWrapper {
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .contactItem a {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    .contactItem .icon {
+        padding-left: 0;
+    }
+    
+    .contactItem a figcaption {
+        padding-left: 0;
+    }
+}
