@@ -47,6 +47,12 @@ button {
     font-size: clamp(0.75rem, 2vw, 1.25rem);
 }
 
+@media (min-width: 1200px) {
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
 /* General Elements */
 
 * {
@@ -116,6 +122,7 @@ header nav img {
 {
     header {
         margin-top: 2rem;
+        margin-bottom: 3rem;
     }
 
     header nav img {
@@ -167,13 +174,15 @@ header nav img {
 }
 
 .techUsed img {
-    width: clamp(20px, 4vw, 60px);
+    width: clamp(20px, 4vw, 50px);
 }
 
 .infoButton {
     border: none;
     border-radius: 5px;
     padding: 5% 0;
+    width: 80%;
+    justify-self: center;
     transition: 500ms;
     cursor: pointer;
 }
@@ -190,6 +199,7 @@ header nav img {
 }
 
 .fullInfo p {
+    grid-area: text;
     margin: 5% 0;
 }
 
@@ -206,6 +216,39 @@ header nav img {
 
 .fullInfoShow {
     display: flex;
+}
+
+@media (min-width: 768px) {
+    .infoButton {
+        display: none;
+    }
+
+    .briefInfo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fullInfo {
+        display: flex;
+    }
+
+    .fullInfo {
+        padding: 2rem;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projectList {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    .projectCard {
+        border-radius: 20px;
+    }
 }
 
 /* Footer Section */

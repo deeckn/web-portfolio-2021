@@ -16,8 +16,14 @@ class ProjectCard {
         this.infoButton = infoButton;
         this.fullInfo = fullInfo;
 
+        this.clicked = false;
+
         this.infoButton.addEventListener('click', () => {
             this.fullInfo.classList.toggle("fullInfoShow");
+
+            if (this.clicked === false) this.infoButton.textContent = "Minimize";
+            else this.infoButton.textContent = "Info";
+            this.clicked = !this.clicked;
         });
     }
 }
