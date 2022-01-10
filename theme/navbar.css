@@ -14,7 +14,7 @@ header a {
 header a h2 {
     grid-area: logo;
     display: inline;
-    cursor: default;
+    cursor: pointer;
     font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
