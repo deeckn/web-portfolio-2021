@@ -184,6 +184,53 @@ header nav img {
     background-color: #FF3B30;
 }
 
+.infoWindow img {
+    display: flex;
+    border-radius: 10px;
+    margin: 5% 0;
+}
+
+@media (min-width: 768px) {
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .infoWindow {
+        padding-top: 2rem;
+    }
+
+    .dot {
+        width: 15px;
+        height: 15px;
+    }
+
+    .infoWindow {
+        display: grid;
+        column-gap: 2rem;
+        grid-template-areas:
+            "dots   dots"
+            "image  article";
+    }
+
+    .dotsWrapper {
+        grid-area: dots;
+        margin-bottom: 5%;
+    }
+
+    .infoWindow img {
+        grid-area: image;
+        justify-self: center;
+        margin: 0;
+    }
+
+    .infoWindow article {
+        grid-area: article;
+    }
+}
+
 /* Full Description */
 
 .fullDescription {
@@ -200,6 +247,14 @@ header nav img {
 .activities img {
     border-radius: 10px;
     margin-bottom: 5%;
+}
+
+@media (min-width: 1200px) {
+    .activities {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
 }
 
 /* Footer Section */
