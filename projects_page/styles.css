@@ -16,7 +16,6 @@ h1 {
 .logo-text {
     font-size: clamp(1.5rem, 2vw, 3rem);
     font-weight: bold;
-    cursor: default;
 }
 
 h2 {
@@ -78,10 +77,14 @@ header {
     transition: margin-top 500ms;
 }
 
-header h2 {
+header .logo-text {
     grid-area: logo;
     display: inline;
-    cursor: default;
+    cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
 }
 
 header nav {

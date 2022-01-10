@@ -23,7 +23,6 @@ h2 {
     font-size: clamp(1.25rem, 4vw, 2.25rem);
     font-weight: bold;
     margin-bottom: 5%;
-    cursor: default;
 }
 
 h3 {
@@ -82,10 +81,13 @@ header {
     transition: margin-top 500ms;
 }
 
+header a {
+    text-decoration: none;
+}
+
 header h2 {
     grid-area: logo;
     display: inline;
-    cursor: default;
 }
 
 header nav {
