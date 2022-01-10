@@ -10,8 +10,4 @@ class NavigationBar {
     }
 }
 
-function main() {
-    new NavigationBar();
-}
-
-main();
+new NavigationBar();
