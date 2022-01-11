@@ -42,6 +42,11 @@ main h2 {
     padding: 5%;
 }
 
+
+.briefInfo h3 {
+    font-size: clamp(0.75rem, 2vw, 2rem);
+}
+
 .techUsed {
     display: flex;
     padding-left: 10px;
