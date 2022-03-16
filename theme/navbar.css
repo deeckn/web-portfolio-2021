@@ -73,7 +73,7 @@ header nav img {
     }
 
     .navLinks li a {
-        font-size: clamp(0.75rem, 1.5vw, 2rem);
+        font-size: clamp(0.75rem, 1.5vw, 1.25rem);
         font-weight: 500;
     }
 }
